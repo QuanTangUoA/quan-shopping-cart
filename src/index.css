@@ -1,45 +1,55 @@
-html{
-  font-size: 62.5%;
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Comfortaa:wght@500&family=Shadows+Into+Light&display=swap");
+html {
+  font-size: 64%;
   box-sizing: border-box;
+  font-family: "Architects Daughter", cursive;
+  font-family: "Comfortaa", cursive;
+  font-family: "Shadows Into Light", cursive;
 }
-body, #root{
+body,
+#root {
   height: 100vh;
   margin: 0;
 }
-body, input, select, textarea{
+body,
+input,
+select,
+textarea {
   font-size: 1.6rem;
 }
-.grid-container{
+.grid-container {
   display: grid;
   grid-template-areas:
-   "header"
-   "main" 
-   "footer";
+    "header"
+    "main"
+    "footer";
   grid-template-rows: 5rem 1fr 5rem;
   grid-template-columns: 1fr;
 }
-a:hover{
+a:hover {
   color: orange;
 }
-header{
+header {
   grid-area: header;
   background-color: #203040;
   color: white;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 0.5rem;
 }
 
-header a{
+header a {
   color: white;
   text-decoration: none;
+  font-size: 2.8rem;
 }
 
-main{
+main {
   grid-area: main;
 }
 
-footer{
+footer {
   grid-area: footer;
   background-color: #203040;
   color: white;
@@ -48,21 +58,21 @@ footer{
   align-items: center;
 }
 
-.content{
+.content {
   display: flex;
   flex-wrap: wrap;
 }
 
-.main{
+.main {
   flex: 3 60rem;
 }
 
-.sidebar{
+.sidebar {
   flex: 1 20rem;
 }
 
 /* product */
-.products{
+.products {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,58 +82,62 @@ footer{
   flex-wrap: wrap;
 }
 
-.products li{
+.products li {
   flex: 0 1 29rem;
   height: 47rem;
   padding: 1rem;
 }
 
-.product{
+.product {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
 
-.product img{
+.product img {
   max-width: 37rem;
   max-height: 37rem;
 }
 
-.product-price{
+.product-price {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.product-price div, .product-price button {
+.product-price div,
+.product-price button {
   text-align: center;
 }
 
-.product-price div{
+.product-price div {
   font-size: 2rem;
 }
 
-.button{
+.button {
   padding: 1rem;
-  border: .1rem #c0c0c0 solid;
+  border: 0.1rem #c0c0c0 solid;
   background-color: #f0f0f0;
   cursor: pointer;
 }
 
 .button.primary {
   background-color: #ffc040;
+  font-family: "Architects Daughter", cursive;
+  font-family: "Comfortaa", cursive;
+  font-family: "Shadows Into Light", cursive;
 }
 
-.button:hover{
+.button:hover {
   border: 0.1rem #80c0c0 solid;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-.filter{
+.filter {
   display: flex;
   padding: 1rem;
   margin: 1rem;
@@ -131,6 +145,62 @@ a{
   border-bottom: 0.1rem #c0c0c0 solid;
 }
 
-.filter div{
+.filter div {
   flex: 1;
+}
+
+/* Index.css */
+.cart {
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+}
+.cart-header {
+  border-bottom: 0.1rem #c0c0c0 solid;
+}
+
+.cart-items {
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+
+.cart-items img {
+  width: 5rem;
+}
+
+.cart-items li {
+  display: flex;
+}
+
+.cart-items li div {
+  padding: 0.5rem;
+}
+
+.cart-items li div:last-child {
+  flex: 1;
+}
+
+.right {
+  text-align: right;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.total > div {
+  font-size: 2rem;
+}
+.total > div,
+.total > button {
+  flex: 1;
+}
+
+select{
+  font-family: "Architects Daughter", cursive;
+  font-family: "Comfortaa", cursive;
+  font-family: "Shadows Into Light", cursive;
 }
