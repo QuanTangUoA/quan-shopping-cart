@@ -8,8 +8,9 @@ export const createOrder = (order) => (dispatch) => {
     },
     body: JSON.stringify(order),
   })
-    .then((res) => res.json)
+    .then((res) => res.json())
     .then((data) => {
+        console.log('data is ',data);
       dispatch({ type: CREATE_ORDER, payload: data });
       localStorage.clear("cartItems");
       dispatch({ type: CLEAR_CART });

@@ -46,6 +46,7 @@ const Order = mongoose.model(
         type: String,
         default: shortid.generate,
       },
+      email: String,
       name: String,
       address: String,
       total: Number,
